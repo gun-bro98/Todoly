@@ -17,6 +17,7 @@
   --medium-spacing: 12px;
   --small-spacing: 6px;
 }
+/*essential selector  */
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +41,7 @@ header {
   font-size: var(--font-size-big);
   text-align: center;
 }
+/* Navigation */
 .nav {
   margin-top: var(--big-spacing);
   border: 1.5px solid var(--black--color);
@@ -67,6 +69,7 @@ header {
 .nav li button:hover ~ .nav li button:hover {
   border-radius: 40%;
 }
+/* Main */
 main {
   border-bottom: 1px solid var(--gray-color);
   display: flex;
@@ -96,6 +99,7 @@ main {
 .main li button i {
   font-size: var(--font-size-medium);
 }
+/* Article */
 article {
   margin-top: var(--medium-spacing);
   display: flex;
@@ -107,13 +111,17 @@ article .header {
   padding-top: var(--small-spacing);
   font-size: var(--font-size-regular);
 }
+/* Today Todoly */
 article .TT {
   border: 1.5px solid black;
   width: 100%;
   height: 300px;
   text-align: center;
   margin-bottom: var(--medium-spacing);
+  display: flex;
+  flex-direction: column;
 }
+/* Friend List */
 article .FL {
   border: 1.5px solid black;
   width: 100%;
@@ -121,6 +129,7 @@ article .FL {
   text-align: center;
   margin-bottom: var(--small-spacing);
 }
+/* Footer */
 footer {
   display: flex;
 }
@@ -132,6 +141,12 @@ footer span:nth-child(1) {
 }
 footer span:nth-child(2) {
   margin-left: var(--big-spacing);
+}
+article .TT .subMain .firend-objects {
+  display: none;
+}
+.FL .list .firend {
+  display: none;
 }
 
 @media screen and (min-width: 520px) {
@@ -159,5 +174,66 @@ footer span:nth-child(2) {
   }
   .TT ~ .FL {
     background-color: rgb(247, 255, 220);
+  }
+  article .TT .subMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+    justify-content: center;
+  }
+  article .TT .subMain .firend-objects {
+    margin: var(--big-spacing) var(--medium-spacing);
+    width: 30%;
+    height: 80%;
+    border: 1.5px solid var(--black--color);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  article .TT .subMain .firend-objects .imgCover {
+    width: 100;
+    flex-basis: 1 1 50%;
+  }
+  article .TT .subMain .firend-objects .imgCover img {
+    width: 100%;
+  }
+  article .TT .subMain .firend-objects .metaData {
+    width: 100%;
+    flex-basis: 1 1 50%;
+  }
+
+  article .FL .list {
+    width: 100%;
+    height: 80%;
+    margin: var(--small-spacing);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .FL .list .firend {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--small-spacing);
+    padding-top: var(--small-spacing);
+    border-top: 1px solid var(--black--color);
+  }
+  article .FL .list .firend .fdImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  article .FL .list .firend .fdImg img {
+    width: 100%;
+    height: 100%;
+  }
+  article .FL .list .firend .metaData {
+    width: 80%;
   }
 }
