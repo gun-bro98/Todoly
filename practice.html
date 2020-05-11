@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bigBox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        position: static;
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        overflow: scroll;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @-webkit-keyframes play-state {
+        from {
+          left: -200px;
+        }
+        to {
+          left: 100px;
+        }
+      }
+      .ani {
+        position: relative;
+        margin: 12px 12px;
+        width: 50px;
+        height: 50px;
+        /* margin-left: -90px; */
+        background-color: #000;
+        background-color: coral;
+        color: #fff;
+        animation: play-state 2s linear infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigBox">
+      <div class="box">
+        <div class="ani"></div>
+        <div class="ani"></div>
+        <div class="ani"></div>
+        <div class="ani"></div>
+        <div class="ani"></div>
+        <div class="ani"></div>
+      </div>
+    </div>
+  </body>
+</html>

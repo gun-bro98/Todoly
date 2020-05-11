@@ -4,6 +4,11 @@
   --black--color: black;
   --button-hover-color: #90caf9;
   --gray-color: gray;
+  --light-gray-color: #f5f5f5;
+  --light-g-color: #fbfffc;
+  --light-y-color: #fffde7;
+  --body-color: #e5ffff;
+  --TT-color: #fffffb;
 
   /* font-size */
   --font-size-big: 48px;
@@ -35,15 +40,17 @@ a {
   color: var(--black--color);
 }
 body {
-  background-color: var(--mint-color);
+  background-color: var(--body-color);
+  box-sizing: border-box;
 }
 header {
   font-size: var(--font-size-big);
   text-align: center;
+  padding: var(--small-spacing) 0;
+  background-color: var(--mint-color);
 }
 /* Navigation */
 .nav {
-  margin-top: var(--big-spacing);
   border: 1.5px solid var(--black--color);
   border-left: 0;
   border-right: 0;
@@ -51,6 +58,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   padding: var(--small-spacing) 0;
+  background-color: var(--light-g-color);
 }
 .nav li {
   width: 100px;
@@ -59,7 +67,7 @@ header {
   width: 100%;
   font-size: var(--font-size-regular);
   border: none;
-  background-color: var(--mint-color);
+  background-color: var(--light-g-color);
 }
 .nav li button:hover {
   background-color: var(--button-hover-color);
@@ -74,7 +82,7 @@ main {
   border-bottom: 1px solid var(--gray-color);
   display: flex;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 0 var(--medium-spacing);
 }
 .main {
@@ -91,10 +99,11 @@ main {
   margin: 0 auto;
   min-width: 100px;
   min-height: 100px;
-  background-color: var(--mint-color);
+  background-color: var(--white-color);
   margin-bottom: var(--medium-spacing);
   border: 2px solid black;
   border-radius: 20%;
+  box-shadow: 3px 3px 1px;
 }
 .main li button i {
   font-size: var(--font-size-medium);
@@ -163,6 +172,53 @@ article .TT .subMain .firend-objects {
   article .TT {
     margin: 0;
     flex: 1 1 70%;
+    background-color: var(--TT-color);
+  }
+
+  article .TT .subMain {
+    position: static;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-x: scroll;
+    justify-content: center;
+    transition-duration: 4s;
+  }
+  @-webkit-keyframes play-state {
+    from {
+      left: 20px;
+    }
+    to {
+      left: -550px;
+    }
+  }
+
+  article .TT .subMain .firend-objects {
+    position: relative;
+    animation: play-state 10s linear infinite alternate;
+    max-width: 200px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: var(--big-spacing) var(--medium-spacing);
+    align-items: center;
+    background-color: var(--TT-color);
+    border: none;
+  }
+  article .TT .subMain .firend-objects .imgCover {
+    border: 1.5px solid var(--black--color);
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  article .TT .subMain .firend-objects .imgCover img {
+    width: 100%;
+    height: 100%;
+  }
+  article .TT .subMain .firend-objects .metaData {
+    align-items: center;
   }
   article .trash-block {
     flex: 1 1 1%;
@@ -173,38 +229,8 @@ article .TT .subMain .firend-objects {
     transition-duration: 4s;
   }
   .TT ~ .FL {
-    background-color: rgb(247, 255, 220);
+    background-color: var(--light-y-color);
   }
-  article .TT .subMain {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    overflow: hidden;
-    justify-content: center;
-  }
-  article .TT .subMain .firend-objects {
-    margin: var(--big-spacing) var(--medium-spacing);
-    width: 30%;
-    height: 80%;
-    border: 1.5px solid var(--black--color);
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  article .TT .subMain .firend-objects .imgCover {
-    width: 100;
-    flex-basis: 1 1 50%;
-  }
-  article .TT .subMain .firend-objects .imgCover img {
-    width: 100%;
-  }
-  article .TT .subMain .firend-objects .metaData {
-    width: 100%;
-    flex-basis: 1 1 50%;
-  }
-
   article .FL .list {
     width: 100%;
     height: 80%;
