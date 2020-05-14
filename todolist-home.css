@@ -106,6 +106,9 @@ main {
   border-radius: 20%;
   box-shadow: 3px 3px 1px;
 }
+.main li button:active {
+  box-shadow: inset 3px 3px 1px;
+}
 .main li button i {
   font-size: var(--font-size-medium);
 }
@@ -127,12 +130,52 @@ article .header {
 article .TT {
   border: 1.5px solid black;
   width: 100%;
-  height: 300px;
+  height: 200px;
   text-align: center;
   margin-bottom: var(--medium-spacing);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  background-color: var(--TT-color);
 }
+article .TT .subMain {
+  width: 800px;
+  height: 100%;
+  margin-top: var(--medium-spacing);
+  border: 1px solid var(--black--color);
+  display: flex;
+  align-items: center;
+  position: static;
+  overflow: hidden;
+}
+@keyframes play-photos {
+  from {
+    left: 130px;
+  }
+  to {
+    left: -400px;
+  }
+}
+article .TT .subMain .firend-objects {
+  background-color: var(--TT-color);
+  border: none;
+  position: relative;
+  max-width: 100px;
+  height: 100px;
+  animation: play-photos 8s linear infinite alternate;
+  margin-right: var(--big-spacing);
+}
+article .TT .subMain .firend-objects .imgCover {
+  width: 100%;
+  height: 100%;
+}
+article .TT .subMain .firend-objects .imgCover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1.5px solid var(--black--color);
+}
+
 /* Friend List */
 article .FL {
   border: 1.5px solid black;
@@ -140,12 +183,48 @@ article .FL {
   height: 300px;
   text-align: center;
   margin-bottom: var(--small-spacing);
+  transition-duration: 4s;
+}
+.TT ~ .FL {
+  background-color: var(--light-y-color);
+}
+article .FL .list {
+  width: 100%;
+  height: 80%;
+  margin: var(--small-spacing) 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+article .FL .list .firend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--small-spacing);
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--black--color);
+}
+article .FL .list .firend .fdImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: var(--small-spacing);
+}
+article .FL .list .firend .fdImg img {
+  width: 100%;
+  height: 100%;
+}
+article .FL .list .firend .metaData {
+  width: 80%;
 }
 /* Footer */
 footer {
   display: flex;
 }
 footer span {
+  padding: var(--medium-spacing) 0;
   font-size: var(--font-size-small);
 }
 footer span:nth-child(1) {
@@ -153,12 +232,6 @@ footer span:nth-child(1) {
 }
 footer span:nth-child(2) {
   margin-left: var(--big-spacing);
-}
-article .TT .subMain .firend-objects {
-  display: none;
-}
-.FL .list .firend {
-  display: none;
 }
 /* 520px 부터는 화면이 바뀝니다. */
 @media screen and (min-width: 520px) {
@@ -177,51 +250,24 @@ article .TT .subMain .firend-objects {
   /* TT */
   article .TT {
     margin: 0;
+    height: 300px;
     flex: 1 1 70%;
     background-color: var(--TT-color);
   }
-
   article .TT .subMain {
-    position: static;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    overflow: hidden;
-    justify-content: center;
-    transition-duration: 4s;
+    width: 1200px;
   }
   @keyframes play-state {
     from {
-      left: 20px;
+      left: 300px;
     }
     to {
-      left: -550px;
+      left: -100px;
     }
   }
 
   article .TT .subMain .firend-objects {
-    position: relative;
-    animation: play-state 10s linear infinite alternate; /*play-state는 이름이다 linear은 등속*/
-    max-width: 200px;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    margin: var(--big-spacing) var(--medium-spacing);
-    align-items: center;
-    background-color: var(--TT-color);
-    border: none;
-  }
-  article .TT .subMain .firend-objects .imgCover {
-    border: 1.5px solid var(--black--color);
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  article .TT .subMain .firend-objects .imgCover img {
-    width: 100%;
-    height: 100%;
+    animation: play-state 5s linear infinite alternate; /*play-state는 이름이다 linear은 등속*/
   }
   article .TT .subMain .firend-objects .metaData {
     align-items: center;
@@ -234,40 +280,5 @@ article .TT .subMain .firend-objects {
   article .FL {
     flex: 1 1 29%;
     margin: 0;
-    transition-duration: 4s;
-  }
-  .TT ~ .FL {
-    background-color: var(--light-y-color);
-  }
-  article .FL .list {
-    width: 100%;
-    height: 80%;
-    margin: var(--small-spacing);
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .FL .list .firend {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: var(--small-spacing);
-    padding-top: var(--small-spacing);
-    border-top: 1px solid var(--black--color);
-  }
-  article .FL .list .firend .fdImg {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-
-  article .FL .list .firend .fdImg img {
-    width: 100%;
-    height: 100%;
-  }
-  article .FL .list .firend .metaData {
-    width: 80%;
   }
 }
