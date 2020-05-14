@@ -118,6 +118,7 @@ article {
   align-items: center;
   background-color: var(--body-color);
 }
+/* Article Header */
 article .header {
   padding-top: var(--small-spacing);
   font-size: var(--font-size-regular);
@@ -159,18 +160,21 @@ article .TT .subMain .firend-objects {
 .FL .list .firend {
   display: none;
 }
-
+/* 520px 부터는 화면이 바뀝니다. */
 @media screen and (min-width: 520px) {
+  /* main태그 X class선택자의 Main O*/
   .main {
     justify-content: flex-start;
   }
   .main li button {
     margin-right: var(--medium-spacing);
   }
+  /* Article */
   article {
     flex-direction: row;
     justify-content: space-evenly;
   }
+  /* TT */
   article .TT {
     margin: 0;
     flex: 1 1 70%;
@@ -222,9 +226,11 @@ article .TT .subMain .firend-objects {
   article .TT .subMain .firend-objects .metaData {
     align-items: center;
   }
+  /* Trash Block */
   article .trash-block {
     flex: 1 1 1%;
   }
+  /* FL */
   article .FL {
     flex: 1 1 29%;
     margin: 0;
