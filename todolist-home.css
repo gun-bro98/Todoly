@@ -40,7 +40,7 @@ a {
   color: var(--black--color);
 }
 body {
-  background-color: var(--body-color);
+  background-color: var(--white-color);
   box-sizing: border-box;
 }
 header {
@@ -71,7 +71,7 @@ header {
 }
 .nav li button:hover {
   background-color: var(--button-hover-color);
-  border-radius: 100%;
+  border-radius: 40%;
   transition-duration: 2s;
 }
 .nav li button:hover ~ .nav li button:hover {
@@ -84,6 +84,7 @@ main {
   flex-direction: column;
   min-height: 80vh;
   padding: 0 var(--medium-spacing);
+  background-color: var(--body-color);
 }
 .main {
   display: flex;
@@ -115,6 +116,7 @@ article {
   flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--body-color);
 }
 article .header {
   padding-top: var(--small-spacing);
@@ -181,11 +183,11 @@ article .TT .subMain .firend-objects {
     height: 100%;
     display: flex;
     flex-flow: column wrap;
-    overflow-x: scroll;
+    overflow: hidden;
     justify-content: center;
     transition-duration: 4s;
   }
-  @-webkit-keyframes play-state {
+  @keyframes play-state {
     from {
       left: 20px;
     }
@@ -196,7 +198,7 @@ article .TT .subMain .firend-objects {
 
   article .TT .subMain .firend-objects {
     position: relative;
-    animation: play-state 10s linear infinite alternate;
+    animation: play-state 10s linear infinite alternate; /*play-state는 이름이다 linear은 등속*/
     max-width: 200px;
     height: 80%;
     display: flex;
