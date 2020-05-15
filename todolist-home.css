@@ -41,7 +41,6 @@ a {
 }
 body {
   background-color: var(--white-color);
-  box-sizing: border-box;
 }
 header {
   font-size: var(--font-size-big);
