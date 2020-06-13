@@ -26,7 +26,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Nanum Myeongjo", serif;
+
   box-sizing: border-box;
 }
 button {
@@ -47,10 +47,14 @@ header {
   text-align: center;
   padding: var(--small-spacing) 0;
   background-color: var(--mint-color);
+  font-family: "Nanum Myeongjo", serif;
 }
 /* Navigation */
 .nav {
-  border: 1.5px solid var(--black--color);
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-top: 1.5px solid var(--black--color);
   border-left: 0;
   border-right: 0;
   /* border-top: 0; */
@@ -78,6 +82,7 @@ header {
 }
 /* Main */
 main {
+  border-top: 1.5px solid black;
   border-bottom: 1px solid var(--gray-color);
   display: flex;
   flex-direction: column;
@@ -104,6 +109,11 @@ main {
   border: 2px solid black;
   border-radius: 20%;
   box-shadow: 3px 3px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Do Hyeon", sans-serif;
 }
 .main li button:active {
   box-shadow: inset 3px 3px 1px;
@@ -124,6 +134,7 @@ article {
 article .header {
   padding-top: var(--small-spacing);
   font-size: var(--font-size-regular);
+  font-family: "Nanum Myeongjo", serif;
 }
 /* Today Todoly */
 article .TT {
@@ -146,6 +157,7 @@ article .TT .subMain {
   align-items: center;
   position: static;
   overflow: hidden;
+  font-family: "Do Hyeon", sans-serif;
 }
 @keyframes play-photos {
   from {
@@ -188,6 +200,7 @@ article .FL {
   background-color: var(--light-y-color);
 }
 article .FL .list {
+  font-family: "Do Hyeon", sans-serif;
   width: 100%;
   height: 80%;
   margin: var(--small-spacing) 0;
@@ -220,7 +233,9 @@ article .FL .list .firend .metaData {
 }
 /* Footer */
 footer {
+  font-family: "Do Hyeon", sans-serif;
   display: flex;
+  height: 85px;
 }
 footer span {
   padding: var(--medium-spacing) 0;
@@ -234,7 +249,14 @@ footer span:nth-child(2) {
 }
 /* 520px 부터는 화면이 바뀝니다. */
 @media screen and (min-width: 520px) {
+  .nav {
+    border: 1.5px solid var(--black--color);
+    position: static;
+  }
   /* main태그 X class선택자의 Main O*/
+  /* main {
+    border: none;
+  } */
   .main {
     justify-content: flex-start;
   }
@@ -279,5 +301,8 @@ footer span:nth-child(2) {
   article .FL {
     flex: 1 1 29%;
     margin: 0;
+  }
+  footer {
+    height: auto;
   }
 }

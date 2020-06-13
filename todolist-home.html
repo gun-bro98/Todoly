@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
     <title>Todolist-home</title>
     <script
       src="https://kit.fontawesome.com/52826ff658.js"
@@ -30,7 +34,7 @@
         </button>
       </li>
       <li>
-        <button><i class="fas fa-id-card"></i></button>
+        <button><i class="fas fa-comment-dots"></i></button>
       </li>
       <li>
         <button><i class="fas fa-cog"></i></button>
@@ -39,23 +43,25 @@
     <!-- Main -->
     <main>
       <ul class="main">
-        <li>
-          <button><i class="fas fa-user-ninja"></i></button>
+        <!-- <li>
+          <button><i class="fas fa-user-ninja"></i> <span>박영호</span></button>
         </li>
         <li>
-          <button><i class="fas fa-user-ninja"></i></button>
+          <button><i class="fas fa-user-ninja"></i><span>백정훈</span></button>
         </li>
         <li>
-          <button><i class="fas fa-user-ninja"></i></button>
+          <button><i class="fas fa-user-ninja"></i><span>하동호</span></button>
         </li>
         <li>
-          <button><i class="fas fa-user-ninja"></i></button>
+          <button><i class="fas fa-user-ninja"></i><span>김명진</span></button>
         </li>
         <li>
-          <button><i class="fas fa-user-ninja"></i></button>
-        </li>
+          <button><i class="fas fa-user-ninja"></i><span>김덕주</span></button>
+        </li> -->
         <li>
-          <button><i class="fas fa-user-plus"></i></button>
+          <button onclick="location.href='todolist-add-friend.html'">
+            <i class="fas fa-user-plus"></i>
+          </button>
         </li>
       </ul>
       <article>
@@ -167,5 +173,7 @@
       <span>e-mail: one0374@naver.com</span>
       <span>Copyright 2020.영호팍.All rights reserved</span>
     </footer>
+    <script src="todolist-home.js"></script>
+    <script src="todolist-add-friend.js"></script>
   </body>
 </html>
