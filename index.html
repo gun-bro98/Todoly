@@ -3,34 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        background-color: lightblue;
-      }
-      div {
-        width: 100%;
-      }
-      button {
-        display: block;
-        width: 150px;
-        height: 40px;
-        margin: 0 auto;
-        margin-top: 100px;
-        box-shadow: 1px 2px 3px;
-        border-radius: 30%;
-        background-color: orange;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+    <title>todoly-first-screen</title>
   </head>
   <body>
-    <div>
-      <button onclick="location.href='todolist-home.html'">
-        눌러주세용~~~
-      </button>
-    </div>
+    <header><span>Todoly</span></header>
+    <form>
+      <div class="loginBlock">
+        <div class="idBlock">
+          <input type="text" id="idText" placeholder="아이디" />
+        </div>
+        <div class="passwordBlock">
+          <input type="password" id="passwordText" placeholder="비밀번호" />
+        </div>
+      </div>
+      <div class="loginBtnBlock">
+        <button
+          type="button"
+          id="loginBtn"
+          onclick="location.href='todolist-home.html'"
+        >
+          로그인
+        </button>
+      </div>
+    </form>
+    <article>
+      <button type="button" id="newMember">회원가입</button>
+    </article>
+    <script src="index.js"></script>
   </body>
 </html>
