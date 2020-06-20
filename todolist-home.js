@@ -1,5 +1,9 @@
 "use strict";
+let friendBtn = document.querySelector("#addFriendBtn");
+friendBtn.addEventListener("click", clickAddBtn);
 firstPlay();
+
+//main의 .main부분 함수이다.
 
 //처음에 localStorage에 있는 데이터들을 Todolist-home에 보이게 할 때 사용하는 함수
 function firstPlay() {
@@ -44,15 +48,7 @@ function resetPlay(data) {
   let buttonReset = document.querySelectorAll(".del");
   buttonReset[data].parentNode.parentNode.style.display = "none";
 }
-//2020.6.14
-//내가 해야할 것
-//중복으로 누를 때 중복으로 저장 안돼야한다.
-//삭제 기능이 가능해져야한다.
-//삭제 기능을 만들시 count를 이용하자.
-
-//2020. 6.15
-//중복 안되게하는 건 성공
-//삭제를 어떻게 해야할지 모르겠다....
-
-//2020. 6.16
-//성공
+//article의 .FL부분의 함수이다.
+function clickAddBtn() {
+  let temp = prompt("친구의 이름을 입력해주세요.", "ex) 박영호");
+}

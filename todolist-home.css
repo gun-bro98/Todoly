@@ -199,6 +199,23 @@ article .FL {
 .TT ~ .FL {
   background-color: var(--light-y-color);
 }
+article .FL .header {
+  display: flex;
+  justify-content: space-evenly;
+}
+article .FL .header #addFriendBtn {
+  font-size: var(--font-size-small);
+  width: 80px;
+  border-radius: 40%;
+  border: 1.5px solid var(--black--color);
+  box-shadow: 1px 1px 1px;
+  background-color: var(--light-g-color);
+  color: var(--black--color);
+  font-family: "Do Hyeon", sans-serif;
+}
+article .FL .header #addFriendBtn:active {
+  box-shadow: inset 1px 1px 1px;
+}
 article .FL .list {
   font-family: "Do Hyeon", sans-serif;
   width: 100%;
