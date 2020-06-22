@@ -175,6 +175,7 @@ article .TT .subMain .firend-objects {
   height: 100px;
   animation: play-photos 8s linear infinite alternate;
   margin-right: var(--big-spacing);
+  overflow: visible;
 }
 article .TT .subMain .firend-objects .imgCover {
   width: 100%;
