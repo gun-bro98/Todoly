@@ -2,7 +2,11 @@
 let friendBtn = document.querySelector("#addFriendBtn");
 friendBtn.addEventListener("click", clickAddBtn);
 firstPlay();
+let innerW = window.innerWidth;
+let innerH = window.innerHeight;
 
+alert(innerW);
+alert(innerH);
 //main의 .main부분 함수이다.
 
 //처음에 localStorage에 있는 데이터들을 Todolist-home에 보이게 할 때 사용하는 함수
