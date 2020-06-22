@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todolist-newbie.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+    <title>New Member Page</title>
+  </head>
+  <body>
+    <header>Todoly</header>
+    <form action="">
+      <legend>회원가입</legend>
+      <hr style="border-color: black;" />
+      <div id="nameBlock">
+        <label for="name">이름: </label>
+        <input type="text" name="name" />
+      </div>
+      <div id="idBlock">
+        <label for="id">아이디: </label>
+        <input type="text" name="id" id="" />
+      </div>
+      <div id="passwordBlock">
+        <label>비밀번호: </label>
+        <input type="password" />
+      </div>
+      <div id="passwordCpr">
+        <label>비밀번호 확인: </label>
+        <input type="password" />
+      </div>
+      <div id="reasonBlock">
+        <label for="">이 애플리케이션을 이용하는 이유!!: </label>
+        <select name="reason" id="">
+          <option value="">골라주세요!</option>
+          <option value="delayWork">할 일을 잘 미뤄서</option>
+          <option value="needToShareWithFriend"
+            >친구들과 일정을 공유하고 싶어서</option
+          >
+          <option value="etc">기타 등등??</option>
+        </select>
+      </div>
+      <div id="btnBox">
+        <button
+          type="button"
+          id="newMemberBtn"
+          onclick="location.href = 'todolist-home.html'"
+        >
+          가입 완료!
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

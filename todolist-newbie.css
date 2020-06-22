@@ -1,0 +1,100 @@
+:root {
+  --mint-color: #ebfffb;
+  --white-color: white;
+  --black--color: black;
+  --button-hover-color: #90caf9;
+  --gray-color: gray;
+  --light-gray-color: #f5f5f5;
+  --light-g-color: #fbfffc;
+  --light-y-color: #fffde7;
+  --body-color: #e5ffff;
+  --TT-color: #fffffb;
+
+  /* font-size */
+  --font-size-big: 48px;
+  --font-size-medium: 36px;
+  --font-size-regular: 20px;
+  --font-size-small: 12px;
+  --font-size-micro: 8px;
+
+  /* spacing */
+  --big-spacing: 18px;
+  --medium-spacing: 12px;
+  --small-spacing: 6px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+body {
+  background-color: var(--mint-color);
+}
+/* header */
+header {
+  font-size: 70px;
+  font-family: "Nanum Myeongjo", serif;
+  text-align: center;
+  margin-top: 80px;
+}
+/* form */
+form {
+  font-family: "Do Hyeon", sans-serif;
+  margin: var(--medium-spacing);
+  padding: 50px;
+  margin-top: var(--big-spacing);
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px;
+  border-radius: 5%;
+}
+form legend {
+  text-align: center;
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--small-spacing);
+}
+form label {
+  font-size: var(--font-size-regular);
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+form div {
+  padding-bottom: var(--small-spacing);
+}
+form input {
+  height: 25px;
+  border-radius: 10px;
+}
+form #nameBlock {
+  margin-top: var(--big-spacing);
+}
+form #reasonBlock label {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+form #reasonBlock {
+  text-align: center;
+}
+form #reasonBlock select {
+  height: 30px;
+  border-radius: 10px;
+  margin-top: var(--medium-spacing);
+}
+form #btnBox {
+  text-align: center;
+  margin-top: 40px;
+}
+form #btnBox #newMemberBtn {
+  width: 100px;
+  height: 30px;
+  box-shadow: 1px 1px 1px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+}
+form #btnBox #newMemberBtn:active {
+  box-shadow: inset 1px 1px 1px;
+}
