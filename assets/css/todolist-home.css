@@ -159,7 +159,7 @@ article .TT .subMain {
   overflow: hidden;
   font-family: "Do Hyeon", sans-serif;
 }
-@keyframes play-photos {
+@keyframes play-images {
   from {
     left: 130px;
   }
@@ -173,7 +173,7 @@ article .TT .subMain .firend-objects {
   position: relative;
   width: 100px;
   height: 120px;
-  animation: play-photos 8s linear infinite alternate;
+  animation: play-images 8s linear infinite alternate;
   margin-right: var(--big-spacing);
 }
 article .TT .subMain .firend-objects .imgCover {
