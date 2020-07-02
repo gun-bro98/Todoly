@@ -25,19 +25,19 @@
       </div>
       <div id="idBlock">
         <label for="id">아이디: </label>
-        <input type="text" name="id" id="" />
+        <input type="text" name="id" />
       </div>
       <div id="passwordBlock">
-        <label>비밀번호: </label>
-        <input type="password" />
+        <label for="password">비밀번호: </label>
+        <input type="password" name="password" />
       </div>
       <div id="passwordCpr">
-        <label>비밀번호 확인: </label>
-        <input type="password" />
+        <label for="checkPassword">비밀번호 확인: </label>
+        <input type="password" name="checkPassword" />
       </div>
       <div id="reasonBlock">
-        <label for="">이 애플리케이션을 이용하는 이유!!: </label>
-        <select name="reason" id="">
+        <label for="reason">이 애플리케이션을 이용하는 이유!!: </label>
+        <select name="reason">
           <option value="">골라주세요!</option>
           <option value="delayWork">할 일을 잘 미뤄서</option>
           <option value="needToShareWithFriend"
@@ -47,6 +47,7 @@
         </select>
       </div>
       <div id="btnBox">
+        <!-- type button에서 submit으로 바꾸기 -->
         <button
           type="button"
           id="newMemberBtn"
