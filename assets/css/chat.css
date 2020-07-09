@@ -167,6 +167,11 @@ article .TT .subMain {
     left: -400px;
   }
 }
+
+article .TT .subMain .chatLine {
+  position:absolute;
+  botton:0px;
+}
 article .TT .subMain .firend-objects {
   background-color: var(--TT-color);
   border: none;
@@ -289,7 +294,7 @@ footer span:nth-child(2) {
   /* TT */
   article .TT {
     margin: 0;
-    height: 300px;
+    height: 800px;
     flex: 1 1 70%;
     background-color: var(--TT-color);
   }
@@ -305,8 +310,13 @@ footer span:nth-child(2) {
     }
   }
 
+  article .TT .subMain .{
+    width: 200;
+    height: 50;
+  }
+
   article .TT .subMain .firend-objects {
-    animation: play-state 5s linear infinite alternate; /*play-state는 이름이다 linear은 등속*/
+    
   }
   article .TT .subMain .firend-objects .metaData {
     align-items: center;
