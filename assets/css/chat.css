@@ -1,0 +1,326 @@
+:root {
+  --mint-color: #ebfffb;
+  --white-color: white;
+  --black--color: black;
+  --button-hover-color: #90caf9;
+  --gray-color: gray;
+  --light-gray-color: #f5f5f5;
+  --light-g-color: #fbfffc;
+  --light-y-color: #fffde7;
+  --body-color: #e5ffff;
+  --TT-color: #fffffb;
+
+  /* font-size */
+  --font-size-big: 48px;
+  --font-size-medium: 36px;
+  --font-size-regular: 20px;
+  --font-size-small: 12px;
+  --font-size-micro: 8px;
+
+  /* spacing */
+  --big-spacing: 18px;
+  --medium-spacing: 12px;
+  --small-spacing: 6px;
+}
+/*essential selector  */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black--color);
+}
+body {
+  background-color: var(--white-color);
+}
+header {
+  font-size: var(--font-size-big);
+  text-align: center;
+  padding: var(--small-spacing) 0;
+  background-color: var(--mint-color);
+  font-family: "Nanum Myeongjo", serif;
+}
+/* Navigation */
+.nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-top: 1.5px solid var(--black--color);
+  border-left: 0;
+  border-right: 0;
+  /* border-top: 0; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: var(--small-spacing) 0;
+  background-color: var(--light-g-color);
+}
+.nav li {
+  width: 100px;
+}
+.nav li button {
+  width: 100%;
+  font-size: var(--font-size-regular);
+  border: none;
+  background-color: var(--light-g-color);
+}
+.nav li button:hover {
+  background-color: var(--button-hover-color);
+  border-radius: 40%;
+  transition-duration: 2s;
+}
+.nav li button:hover ~ .nav li button:hover {
+  border-radius: 40%;
+}
+/* Main */
+main {
+  border-top: 1.5px solid black;
+  border-bottom: 1px solid var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 0 var(--medium-spacing);
+  background-color: var(--body-color);
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--medium-spacing);
+  justify-content: space-evenly;
+}
+.main li {
+  display: flex;
+}
+.main li button {
+  border: 1px solid var(--black--color);
+  margin: 0 auto;
+  min-width: 100px;
+  min-height: 100px;
+  background-color: var(--white-color);
+  margin-bottom: var(--medium-spacing);
+  border: 2px solid black;
+  border-radius: 20%;
+  box-shadow: 3px 3px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Do Hyeon", sans-serif;
+}
+.main li button:active {
+  box-shadow: inset 3px 3px 1px;
+}
+.main li button i {
+  font-size: var(--font-size-medium);
+}
+/* Article */
+article {
+  margin-top: var(--medium-spacing);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--body-color);
+}
+/* Article Header */
+article .header {
+  padding-top: var(--small-spacing);
+  font-size: var(--font-size-regular);
+  font-family: "Nanum Myeongjo", serif;
+}
+/* Today Todoly */
+article .TT {
+  border: 1.5px solid black;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  margin-bottom: var(--medium-spacing);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--TT-color);
+}
+article .TT .subMain {
+  width: 800px;
+  height: 100%;
+  margin-top: var(--medium-spacing);
+  border: 1px solid var(--black--color);
+  display: flex;
+  align-items: center;
+  position: static;
+  overflow: hidden;
+  font-family: "Do Hyeon", sans-serif;
+}
+@keyframes play-images {
+  from {
+    left: 130px;
+  }
+  to {
+    left: -400px;
+  }
+}
+article .TT .subMain .firend-objects {
+  background-color: var(--TT-color);
+  border: none;
+  position: relative;
+  width: 100px;
+  height: 120px;
+  animation: play-images 8s linear infinite alternate;
+  margin-right: var(--big-spacing);
+}
+article .TT .subMain .firend-objects .imgCover {
+  width: 100%;
+  height: 80%;
+}
+article .TT .subMain .firend-objects .imgCover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1.5px solid var(--black--color);
+}
+
+/* Friend List */
+article .FL {
+  border: 1.5px solid black;
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  margin-bottom: var(--small-spacing);
+  transition-duration: 4s;
+}
+.TT ~ .FL {
+  background-color: var(--light-y-color);
+}
+article .FL .header {
+  display: flex;
+  justify-content: space-evenly;
+}
+article .FL .header #addFriendBtn {
+  font-size: var(--font-size-small);
+  width: 80px;
+  border-radius: 40%;
+  border: 1.5px solid var(--black--color);
+  box-shadow: 1px 1px 1px;
+  background-color: var(--light-g-color);
+  color: var(--black--color);
+  font-family: "Do Hyeon", sans-serif;
+}
+article .FL .header #addFriendBtn:active {
+  box-shadow: inset 1px 1px 1px;
+}
+article .FL .list {
+  font-family: "Do Hyeon", sans-serif;
+  width: 100%;
+  height: 80%;
+  margin: var(--small-spacing) 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+article .FL .list .firend {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--small-spacing);
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--black--color);
+}
+article .FL .list .firend .fdImg {
+  width: 50px;
+  height: 70%;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: var(--small-spacing);
+}
+article .FL .list .firend .fdImg img {
+  width: 100%;
+  height: 100%;
+}
+article .FL .list .firend .metaData {
+  width: 80%;
+}
+/* Footer */
+footer {
+  font-family: "Do Hyeon", sans-serif;
+  display: flex;
+  height: 85px;
+}
+footer span {
+  padding: var(--medium-spacing) 0;
+  font-size: var(--font-size-small);
+}
+footer span:nth-child(1) {
+  margin-left: var(--medium-spacing);
+}
+footer span:nth-child(2) {
+  margin-left: var(--big-spacing);
+}
+/* 520px 부터는 화면이 바뀝니다. */
+@media screen and (min-width: 520px) {
+  .nav {
+    border: 1.5px solid var(--black--color);
+    position: static;
+  }
+  /* main태그 X class선택자의 Main O*/
+  /* main {
+    border: none;
+  } */
+  .main {
+    justify-content: flex-start;
+  }
+  .main li button {
+    margin-right: var(--medium-spacing);
+  }
+  /* Article */
+  article {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  /* TT */
+  article .TT {
+    margin: 0;
+    height: 300px;
+    flex: 1 1 70%;
+    background-color: var(--TT-color);
+  }
+  article .TT .subMain {
+    width: 1200px;
+  }
+  @keyframes play-state {
+    from {
+      left: 300px;
+    }
+    to {
+      left: -100px;
+    }
+  }
+
+  article .TT .subMain .firend-objects {
+    animation: play-state 5s linear infinite alternate; /*play-state는 이름이다 linear은 등속*/
+  }
+  article .TT .subMain .firend-objects .metaData {
+    align-items: center;
+  }
+  /* Trash Block */
+  article .trash-block {
+    flex: 1 1 1%;
+  }
+  /* FL */
+  article .FL {
+    flex: 1 1 29%;
+    margin: 0;
+  }
+  footer {
+    height: auto;
+  }
+}
