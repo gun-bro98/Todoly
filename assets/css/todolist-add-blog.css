@@ -1,0 +1,197 @@
+:root {
+  --mint-color: #ebfffb;
+  --white-color: white;
+  --black--color: black;
+  --button-hover-color: #90caf9;
+  --gray-color: gray;
+  --light-gray-color: #f5f5f5;
+  --light-g-color: #fbfffc;
+  --light-y-color: #fffde7;
+  --body-color: #e5ffff;
+  --TT-color: #fffffb;
+  --light-blue: #5eb8ff;
+
+  /* font-size */
+  --font-size-big: 48px;
+  --font-size-medium: 36px;
+  --font-size-regular: 20px;
+  --font-size-small: 12px;
+  --font-size-micro: 8px;
+
+  /* spacing */
+  --big-spacing: 18px;
+  --medium-spacing: 12px;
+  --small-spacing: 6px;
+}
+/*essential selector  */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black--color);
+}
+body {
+  background-color: var(--white-color);
+}
+header {
+  font-size: var(--font-size-big);
+  text-align: center;
+  padding: var(--small-spacing) 0;
+  background-color: var(--mint-color);
+  font-family: "Nanum Myeongjo", serif;
+}
+/* Navigation */
+.nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  border-top: 1.5px solid var(--black--color);
+  border-left: 0;
+  border-right: 0;
+  /* border-top: 0; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: var(--small-spacing) 0;
+  background-color: var(--light-g-color);
+}
+.nav li {
+  width: 100px;
+}
+.nav li button {
+  width: 100%;
+  font-size: var(--font-size-regular);
+  border: none;
+  background-color: var(--light-g-color);
+}
+.nav li button:hover {
+  background-color: var(--button-hover-color);
+  border-radius: 40%;
+  transition-duration: 2s;
+}
+.nav li button:hover ~ .nav li button:hover {
+  border-radius: 40%;
+}
+/* Main */
+main {
+  font-family: "Do Hyeon", sans-serif;
+  border-top: 1.5px solid black;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--mint-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+/* polaroidBox */
+main .polaroidBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: var(--big-spacing);
+  border: 1px solid var(--black--color);
+  padding-bottom: var(--big-spacing);
+  border: 1.1px solid var(--black--color);
+  background-color: var(--white-color);
+}
+main .polaroidBox #uploading {
+  display: block;
+  width: 90%;
+  margin-top: var(--medium-spacing);
+}
+main .polaroidBox .polaroidImg {
+  width: 90%;
+  height: 30%;
+  margin: var(--medium-spacing);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* metaData */
+main .metaData {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 300px;
+  justify-content: space-between;
+}
+main .metaData label {
+  font-family: "Do Hyeon", sans-serif;
+  text-align: center;
+  line-height: 30px;
+}
+/* textarea의 placeholder style 적용 */
+textarea::-webkit-input-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
+}
+textarea::-moz-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
+}
+textarea:-ms-input-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
+}
+textarea:-moz-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
+}
+textarea::placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
+}
+/* Posting Section */
+#postingSection {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+#postingSection #postingBtn {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 0.5px solid black;
+  font-size: 35px;
+}
+/* Footer */
+footer {
+  display: flex;
+  height: 85px;
+}
+footer span {
+  font-family: "Do Hyeon", sans-serif;
+  padding: var(--medium-spacing) 0;
+  font-size: var(--font-size-small);
+}
+footer span:nth-child(1) {
+  margin-left: var(--medium-spacing);
+}
+footer span:nth-child(2) {
+  margin-left: var(--big-spacing);
+}
+@media screen and (min-width: 520px) {
+  main {
+    border-top: none;
+  }
+  .nav {
+    border: 1.5px solid var(--black--color);
+    position: static;
+  }
+  footer {
+    height: auto;
+  }
+}
