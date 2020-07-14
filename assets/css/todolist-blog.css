@@ -152,6 +152,19 @@ main .metaData .info .infoImg img {
 main .metaData .info span {
   font-size: var(--font-size-small);
 }
+/* Posting Section */
+#postingSection {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+#postingSection #postingBtn {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 0.5px solid black;
+}
 /* Footer */
 footer {
   display: flex;
