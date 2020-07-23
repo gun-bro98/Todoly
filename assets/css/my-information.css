@@ -1,0 +1,129 @@
+:root {
+    --mint-color: #ebfffb;
+    --white-color: white;
+    --black--color: black;
+    --button-hover-color: #90caf9;
+    --gray-color: gray;
+    --light-gray-color: #f5f5f5;
+    --light-g-color: #fbfffc;
+    --light-y-color: #fffde7;
+    --body-color: #e5ffff;
+    --TT-color: #fffffb;
+    --light-blue: #5eb8ff;
+
+    /* font-size */
+    --font-size-big: 48px;
+    --font-size-medium: 36px;
+    --font-size-regular: 20px;
+    --font-size-small: 12px;
+    --font-size-micro: 8px;
+
+    /* spacing */
+    --big-spacing: 18px;
+    --medium-spacing: 12px;
+    --small-spacing: 6px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    border-bottom: 3px solid var(--lightgray-color);
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: var(--mint-color);
+}
+
+.basic{
+    
+    width: 150px;
+    height: 150px;
+    border:2px solid black;
+    border-radius: 50%;
+    
+}
+
+div{
+    text-align: center;
+}
+
+#profile{
+    display:inline-block;
+    background-color: var(--light-blue);
+    border:2px solid black;
+    width: 200px;
+    border-radius: 20px;
+    background-size: cover;
+}
+
+.nav {
+    width: 100%;
+    bottom: 0px;
+    border-top: 1.5px solid var(--black--color);
+    border-left: 0;
+    border-right: 0;
+    /* border-top: 0; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--small-spacing) 0;
+    background-color: var(--light-g-color);
+}
+
+.nav li {
+    width: 100px;
+}
+
+.nav li button {
+    width: 100%;
+    font-size: var(--font-size-regular);
+    border: none;
+    background-color: var(--light-g-color);
+}
+
+.nav li button:hover {
+    background-color: var(--button-hover-color);
+    border-radius: 40%;
+    transition-duration: 2s;
+}
+
+.nav li button:hover ~ .nav li button:hover {
+    border-radius: 40%;
+}
+
+button {
+    cursor: pointer;
+}
+
+main{
+    background-color: var(--mint-color);;
+}
+
+ul li{
+    life-style-type: none; 
+}
+
+.coding li{
+    life-style-type: none; 
+    display: inline; 
+    margin-left: 3px;
+}
+
+.coding:hover{
+    color: var(--gray-color)
+}
+
+th, td {
+    border:1px solid #ccc;
+}		
+td, th {
+    padding:5px;   
+}
+
+table{
+    display: inline;
+}
