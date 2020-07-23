@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-information</title>
+    <link rel="stylesheet" href="../assets/css/my-information.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap"
+    rel="stylesheet"
+  />
+    <script
+    src="https://kit.fontawesome.com/52826ff658.js"
+    crossorigin="anonymous"
+    >
+    </script>
+</head>
+<header>
+    <h1>Todoly</h1>
+</header>
+
+<body>
+    <!--nav!-->
+    <ul class="nav">
+        <li>
+            <button><i class="fas fa-user"></i></button>
+        </li>
+        <li>
+            <button><i class="fab fa-blogger"></i></button>
+        </li>
+        <li>
+            <button><i class="fas fa-comment-dots"></i></button>
+        </li>
+        <li>
+            <button><i class="fas fa-cog"></i></button>
+        </li>
+    </ul>
+    <main>
+    <div>
+        <h2>내정보</h2>
+        <img class="basic" src="../assets/images/기본프로필사진.png" alt="기본프로필">
+        <p>이름</p>
+        <h2>프로필 편집</h2>
+    </div>
+    <div>
+    <h2 id="profile">자기소개</h2>
+        <form>
+            <input type="text" style=width:200px;height:50px;>
+        </form>
+    </div>
+    <div>
+    <h2>나의 목표</h2>
+        <form>
+            <input type="text" style=width:200px;height:50px;>
+        </form>
+    <h2>나의 계획</h2>
+        <label>
+            <input type="date" id="Day">
+            <input type="button" value ="검색">
+        </label>
+        <form>
+            
+            <table class="plan">
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+                </tr>
+            <tr>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+                <td><input type="text" size="10"></td>
+            </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+    <h2>관심 언어</h2>
+        <h3>(다수선택가능)</h3>
+        <ul class="coding">
+        <li><label ><input type="radio" value="HTML">Html</label></li>
+        <li><label ><input type="radio" value="CSS">Css</label></li>
+        <li><label ><input type="radio" value="JAVA">java</label></li>
+        <li><label ><input type="radio" value="PYTHON">python</label></li>
+        <li><label ><input type="radio" value="C">c</label></li>
+        <li><label ><input type="radio" value="C#">c#</label></li>
+        <li><label ><input type="radio" value="C++">c++</label></li>
+        <li><label ><input type="radio" value="JS">js</label></li>
+        </ul>
+    </div>
+    <div>
+    <h2>상세정보</h2>
+        <ul class="M-information">
+            <li class="M-information">주소:서울시 광진구 자양로 4나길</li>
+            <li class="M-information">학교:삼육대학교</li>
+            <li class="M-information">이메일:bjh9807@naver.com</li>
+        </ul>
+    <div>
+    <h2>게시</h2>
+    </main>
+</body>
+</html>
