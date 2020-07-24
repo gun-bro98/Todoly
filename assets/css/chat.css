@@ -169,8 +169,7 @@ article .TT .subMain {
 }
 
 article .TT .subMain .chatLine {
-  position:absolute;
-  botton:0px;
+  position: absolute;
 }
 article .TT .subMain .firend-objects {
   background-color: var(--TT-color);
@@ -310,13 +309,9 @@ footer span:nth-child(2) {
     }
   }
 
-  article .TT .subMain .{
+  article .TT .subMain {
     width: 200;
     height: 50;
-  }
-
-  article .TT .subMain .firend-objects {
-    
   }
   article .TT .subMain .firend-objects .metaData {
     align-items: center;
