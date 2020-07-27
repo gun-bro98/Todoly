@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todoly Blog</title>
+    <link rel="stylesheet" href="../assets/css/todolist-add-blog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/52826ff658.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="todolist-home.html">Todoly</a>
+    </header>
+    <!-- Navigation -->
+    <ul class="nav">
+      <li>
+        <button><i class="fas fa-user"></i></button>
+      </li>
+      <li>
+        <button><i class="fab fa-blogger"></i></button>
+      </li>
+      <li>
+        <button><i class="fas fa-comment-dots"></i></button>
+      </li>
+      <li>
+        <button><i class="fas fa-cog"></i></button>
+      </li>
+    </ul>
+    <main>
+      <form class="polaroidBox">
+        <input type="file" name="uploading" id="uploading">
+        <div class="polaroidImg">
+          <!-- 이미 생성되는 곳 -->
+        </div>
+        <div class="metaData">
+            <label for="longWriting">당신의 글과 사진으로 자랑해보세요!</label>
+            <textarea name="longWriting" id="longWriting" cols="100%" rows="100%" placeholder="글쓰는 공간입니다."></textarea>
+            
+        </div>
+      </div>
+    </main>
+    <div id="postingSection">
+        <button type="button" id="postingBtn" onclick="location.href='todolist-blog.html'"><i class="fas fa-undo-alt"></i></button>
+      </div>
+    <footer>
+        <span>e-mail: one0374@naver.com</span>
+      <span>Copyright 2020.영호팍.All rights reserved</span>
+    </footer>
+  </body>
+</html>

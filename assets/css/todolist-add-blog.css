@@ -86,7 +86,7 @@ main {
   font-family: "Do Hyeon", sans-serif;
   border-top: 1.5px solid black;
   width: 100%;
-  height: 100%;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,58 +99,59 @@ main .polaroidBox {
   flex-direction: column;
   align-items: center;
   width: 80%;
+  height: 100%;
   margin: var(--big-spacing);
   border: 1px solid var(--black--color);
   padding-bottom: var(--big-spacing);
   border: 1.1px solid var(--black--color);
   background-color: var(--white-color);
 }
+main .polaroidBox #uploading {
+  display: block;
+  width: 90%;
+  margin-top: var(--medium-spacing);
+}
 main .polaroidBox .polaroidImg {
   width: 90%;
-  height: 100%;
+  height: 30%;
   margin: var(--medium-spacing);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-main .polaroidBox .polaroidImg img {
-  width: 100%;
-  height: 100%;
-  border: 1.1px solid var(--black--color);
-}
+
 /* metaData */
 main .metaData {
   display: flex;
+  flex-direction: column;
   width: 90%;
+  height: 300px;
   justify-content: space-between;
 }
-main .metaData .content {
-  width: 80%;
+main .metaData label {
+  font-family: "Do Hyeon", sans-serif;
+  text-align: center;
+  line-height: 30px;
 }
-main .metaData .content p {
-  font-size: var(--font-size-small);
-  line-height: 20px;
+/* textarea의 placeholder style 적용 */
+textarea::-webkit-input-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
 }
-main .metaData .content .tag {
-  font-size: var(--font-size-micro);
-  color: var(--light-blue);
+textarea::-moz-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
 }
-main .metaData .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 15%;
+textarea:-ms-input-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
 }
-main .metaData .info .infoImg {
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
+textarea:-moz-placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
 }
-main .metaData .info .infoImg img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  margin: 0 auto;
-}
-main .metaData .info span {
-  font-size: var(--font-size-small);
+textarea::placeholder {
+  font-size: var(--font-size-regular);
+  font-family: "Do Hyeon", sans-serif;
 }
 /* Posting Section */
 #postingSection {
@@ -164,6 +165,7 @@ main .metaData .info span {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   border: 0.5px solid black;
+  font-size: 35px;
 }
 /* Footer */
 footer {
