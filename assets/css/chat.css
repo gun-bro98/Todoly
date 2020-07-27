@@ -150,7 +150,7 @@ article .TT {
 }
 article .TT .subMain {
   width: 800px;
-  height: 100%;
+  height: 90%;
   margin-top: var(--medium-spacing);
   border: 1px solid var(--black--color);
   display: flex;
@@ -159,6 +159,15 @@ article .TT .subMain {
   overflow: hidden;
   font-family: "Do Hyeon", sans-serif;
 }
+
+article .TT .chatLine {
+  height: 10%;
+}
+article .TT .chatLine.inputChat {
+  width: 80px;
+  align-items: left;
+}
+
 @keyframes play-images {
   from {
     left: 130px;
@@ -170,7 +179,7 @@ article .TT .subMain {
 
 article .TT .subMain .chatLine {
   position:absolute;
-  botton:0px;
+  bottom:0px;
 }
 article .TT .subMain .firend-objects {
   background-color: var(--TT-color);
@@ -197,9 +206,8 @@ article .FL {
   border: 1.5px solid black;
   width: 100%;
   height: 800px;
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--small-spacing);
-  transition-duration: 4s;
 }
 .TT ~ .FL {
   background-color: var(--light-y-color);
@@ -230,6 +238,7 @@ article .FL .list {
   display: flex;
   flex-direction: column;
 }
+
 article .FL .list .firend {
   width: 100%;
   height: 100%;
@@ -247,6 +256,13 @@ article .FL .list .firend .fdImg {
   overflow: hidden;
   margin-left: var(--small-spacing);
 }
+
+article .FL .list .firend .chatNum {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
 article .FL .list .firend .fdImg img {
   width: 100%;
   height: 100%;
@@ -298,9 +314,15 @@ footer span:nth-child(2) {
     flex: 1 1 70%;
     background-color: var(--TT-color);
   }
+
   article .TT .subMain {
-    width: 1200px;
+    width:1200px;
+
   }
+  article .TT .chatLine {
+
+  }
+
   @keyframes play-state {
     from {
       left: 300px;
